@@ -9,7 +9,13 @@ def img_grayscale(image_convert):
     gray_camera_img = img.convert('L')
     st.image(gray_camera_img)
 
+# Upload an image
+uploaded_image = st.file_uploader("Upload Image")
+if uploaded_image:
+    img_grayscale(uploaded_image)
 
+
+# Click an image live
 with st.expander("Start camera"):
      camera_image = st.camera_input("Camera")
 
